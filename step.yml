@@ -18,14 +18,14 @@ is_always_run: false
 is_skippable: false
 run_if: ""
 inputs:
-  - WTI_API_KEY: null
+  - wti_api_key: null
     opts:
       title: "Web Translate It API Key"
       summary: Find the API key on webtranslateit.com in your project settings.
       description: |-
-          If no `.wti` file can be located in the $WTI_WORKING_DIRECTORY (defaults to current working directory), the step creates a `.wti` file based on the $WTI_API_KEY you provide. If neither a `.wti` file nor an $WTI_API_KEY are given, the step fails.
+          If no `.wti` file can be located in the $wti_working_directory (defaults to current working directory), the step creates a `.wti` file based on the $wti_api_key you provide. If neither a `.wti` file nor an $wti_api_key are given, the step fails.
       is_required: false
-  - WTI_WORKING_DIRECTORY: null
+  - wti_working_directory: null
     opts:
       title: "Working directory"
       summary: The directory containing the `.wti` file.

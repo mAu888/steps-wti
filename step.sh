@@ -20,22 +20,22 @@ if [ $? -ne 0 ]; then
 fi
 
 # Switch to working directory
-if [ -z "${WTI_WORKING_DIRECTORY}" ]; then
+if [ -z "${wti_working_directory}" ]; then
   WTI_WORKING_DIRECTORY="."
 fi
 
 # Change into working directory
-print_and_do_command_exit_on_error cd "${WTI_WORKING_DIRECTORY}"
+print_and_do_command_exit_on_error cd "${wti_working_directory}"
 
 # Check for `.wti` file or `$API_KEY`
-if [ ! -f ".wti" -a -z "$WTI_API_KEY" ]; then
-  echo " [!] No .wti configuration file found neither WTI_API_KEY was given."
+if [ ! -f ".wti" -a -z "$wti_api_key" ]; then
+  echo " [!] No .wti configuration file found neither wti_api_key was given."
   exit 1
 fi
 
 # Write `.wti` file, if none found
 if [ ! -f ".wti" ]; then
-  echo "api_key: ${WTI_API_KEY}" > ".wti"
+  echo "api_key: ${wti_api_key}" > ".wti"
 fi
 
 print_and_do_command_exit_on_error wti pull

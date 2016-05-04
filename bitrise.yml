@@ -23,8 +23,8 @@ workflows:
           but the step would use the default value specified in the `step.yml`
           file if you would not specify another value.
         inputs:
-        - WTI_API_KEY: "Your API Key"
-        - WTI_WORKING_DIRECTORY: "."
+        - wti_api_key: "Your API Key"
+        - wti_working_directory: "."
     - script:
         is_always_run: true
         inputs:
