@@ -21,7 +21,7 @@ fi
 
 # Switch to working directory
 if [ -z "${wti_working_directory}" ]; then
-  WTI_WORKING_DIRECTORY="."
+  wti_working_directory="."
 fi
 
 # Change into working directory
